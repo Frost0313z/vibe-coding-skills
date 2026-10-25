@@ -4,8 +4,11 @@ AI(Claude Code)와 바이브 코딩을 하며 **자주 되풀이한 요청**을 
 
 ## 들어 있는 스킬
 
+한 작업의 흐름: **start**(새 브랜치) → 고치기(필요하면 **refactor**) → **ship**(커밋 · 푸시 · PR) → 사람이 병합 → 다시 **start**.
+
 | 스킬 | 부르는 법 | 하는 일 |
 |---|---|---|
+| [start](start/SKILL.md) | `/start`, "새 브랜치 따줘", "새 기능 시작할게" | 새 작업을 시작할 때. 앞 PR이 병합됐는지 · 남은 수정이 없는지 보고, 원격의 최신 main을 받아 그사이 들어온 변경을 알린 뒤 새 브랜치를 판다 |
 | [ship](ship/SKILL.md) | `/ship`, "커밋해", "커밋하고 PR 올려", "깃 최신화해" | 브랜치 · PR 상태를 보고, 시험을 돌리고, 고친 파일만 골라 커밋 · 푸시 · PR. 부딪치면 양쪽을 살려 풀고 다시 시험. 시킨 만큼만 |
 | [refactor](refactor/SKILL.md) | `/refactor`, "리팩토링해줘", "코드 정리해줘" | 겉 동작은 그대로 두고 속만 정리. 고치기 전 출력을 떠 두고 고친 뒤 한 글자까지 비교해 "그대로"임을 보인다 |
 
@@ -20,7 +23,7 @@ AI(Claude Code)와 바이브 코딩을 하며 **자주 되풀이한 요청**을 
 
 ```bash
 git clone https://github.com/Frost0313z/vibe-coding-skills.git
-cp -r vibe-coding-skills/ship vibe-coding-skills/refactor ~/.claude/skills/
+cp -r vibe-coding-skills/start vibe-coding-skills/ship vibe-coding-skills/refactor ~/.claude/skills/
 ```
 
 ## 공통 원칙
@@ -31,7 +34,7 @@ cp -r vibe-coding-skills/ship vibe-coding-skills/refactor ~/.claude/skills/
 
 ## 만든 배경
 
-2026-10-25, 팀 프로젝트에서 한 사람이 하루 동안 Claude Code에 되풀이해 시킨 일(리팩토링 · 커밋 · 푸시 · PR · 깃 최신화)과 그때 생긴 실수(병합된 PR에 커밋을 더 올리려다 막힘, 되돌리다 수정이 날아갈 뻔함)를 절차로 옮겼습니다. 초안은 Claude(Claude Code)가 썼습니다.
+2026-10-25, 팀 프로젝트에서 한 사람이 하루 동안 Claude Code에 되풀이해 시킨 일(새 브랜치 · 리팩토링 · 커밋 · 푸시 · PR · 깃 최신화)과 그때 생긴 실수(병합된 PR에 커밋을 더 올리려다 막힘, 되돌리다 수정이 날아갈 뻔함)를 절차로 옮겼습니다. 초안은 Claude(Claude Code)가 썼습니다.
 
 같은 사람이 만든 다른 스킬: [socratic](https://github.com/Frost0313z/socratic-inquiry-skill) — 소크라테스 문답.
 
