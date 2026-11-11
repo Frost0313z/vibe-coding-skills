@@ -4,7 +4,7 @@ AI(Claude Code)와 바이브 코딩을 하며 **자주 되풀이한 요청**을 
 
 ## 들어 있는 스킬
 
-한 작업의 흐름: PRD가 있으면 **prd-task**(작업 목록) → **start**(새 브랜치) → 고치기(필요하면 **refactor**) → **ship**(커밋 · 푸시 · PR) → 사람이 병합 → 다시 **start**.
+한 작업의 흐름: PRD가 있으면 **prd-task**(작업 목록) → **start**(새 브랜치) → 고치기(필요하면 **refactor**) → **ship**(커밋 · 푸시 · PR) → 사람이 병합 → 다시 **start**. 남에게 보여 줄 때가 되면 **readme**(설명 문서).
 
 | 스킬 | 부르는 법 | 하는 일 |
 |---|---|---|
@@ -12,6 +12,7 @@ AI(Claude Code)와 바이브 코딩을 하며 **자주 되풀이한 요청**을 
 | [start](start/SKILL.md) | `/start`, "새 브랜치 따줘", "새 기능 시작할게" | 새 작업을 시작할 때. 앞 PR이 병합됐는지 · 남은 수정이 없는지 보고, 원격의 최신 main을 받아 그사이 들어온 변경을 알린 뒤 새 브랜치를 판다 |
 | [ship](ship/SKILL.md) | `/ship`, "커밋해", "커밋하고 PR 올려", "깃 최신화해" | 브랜치 · PR 상태를 보고, 시험을 돌리고, 고친 파일만 골라 커밋 · 푸시 · PR. 부딪치면 양쪽을 살려 풀고 다시 시험. 시킨 만큼만 |
 | [refactor](refactor/SKILL.md) | `/refactor`, "리팩토링해줘", "코드 정리해줘" | 겉 동작은 그대로 두고 속만 정리. 고치기 전 출력을 떠 두고 고친 뒤 한 글자까지 비교해 "그대로"임을 보인다 |
+| [readme](readme/SKILL.md) | `/readme`, "README 써줘", "리드미 만들어줘" | 남에게 설명할 README를 쓴다. 읽는 사람을 정하고, 코드를 끝까지 읽고 실제로 돌려 본 출력 · 구조 · 데이터 모양을 재료로 "무엇 → 왜 → 실행 → 기능 → 구조" 순서로 쉽고 풍부하게. 적은 이름 · 명령은 코드와 대조해 확인한다 |
 
 ## 설치
 
@@ -24,7 +25,7 @@ AI(Claude Code)와 바이브 코딩을 하며 **자주 되풀이한 요청**을 
 
 ```bash
 git clone https://github.com/Frost0313z/vibe-coding-skills.git
-cp -r vibe-coding-skills/prd-task vibe-coding-skills/start vibe-coding-skills/ship vibe-coding-skills/refactor ~/.claude/skills/
+cp -r vibe-coding-skills/prd-task vibe-coding-skills/start vibe-coding-skills/ship vibe-coding-skills/refactor vibe-coding-skills/readme ~/.claude/skills/
 ```
 
 ## 공통 원칙
