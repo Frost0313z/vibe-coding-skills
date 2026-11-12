@@ -4,7 +4,7 @@ AI(Claude Code)와 바이브 코딩을 하며 **자주 되풀이한 요청**을 
 
 ## 들어 있는 스킬
 
-한 작업의 흐름: PRD가 있으면 **prd-task**(작업 목록) → **start**(새 브랜치) → 고치기(필요하면 **refactor**) → **ship**(커밋 · 푸시 · PR) → 사람이 병합 → 다시 **start**. 남에게 보여 줄 때가 되면 **readme**(설명 문서).
+한 작업의 흐름: PRD가 있으면 **prd-task**(작업 목록) → **start**(새 브랜치) → 고치기(필요하면 **refactor**) → **ship**(커밋 · 푸시 · PR) → 사람이 병합 → 다시 **start**. 남에게 보여 줄 때가 되면 **readme**(설명 문서). 만든 것을 내가 설명할 수 있어야 할 때는 **why-how**(학습 정리).
 
 | 스킬 | 부르는 법 | 하는 일 |
 |---|---|---|
@@ -13,6 +13,7 @@ AI(Claude Code)와 바이브 코딩을 하며 **자주 되풀이한 요청**을 
 | [ship](ship/SKILL.md) | `/ship`, "커밋해", "커밋하고 PR 올려", "깃 최신화해" | 브랜치 · PR 상태를 보고, 시험을 돌리고, 고친 파일만 골라 커밋 · 푸시 · PR. 부딪치면 양쪽을 살려 풀고 다시 시험. 시킨 만큼만 |
 | [refactor](refactor/SKILL.md) | `/refactor`, "리팩토링해줘", "코드 정리해줘" | 겉 동작은 그대로 두고 속만 정리. 고치기 전 출력을 떠 두고 고친 뒤 한 글자까지 비교해 "그대로"임을 보인다 |
 | [readme](readme/SKILL.md) | `/readme`, "README 써줘", "리드미 만들어줘" | 남에게 설명할 README를 쓴다. 읽는 사람을 정하고, 코드를 끝까지 읽고 실제로 돌려 본 출력 · 구조 · 데이터 모양을 재료로, 첫 화면은 후킹 구역(한 줄 소개 · 배지 · 대표 장면 · 이모지 기능 표 · 30초 시작)으로, 그 아래는 "무엇 → 왜 → 실행 → 기능 → 구조" 순서로 쉽고 풍부하게. 적은 이름 · 명령은 코드와 대조해 확인한다. AI 사전평가 · 심사 피드백을 붙이면 항목별로 갈라 문서로 채울 것만 실측 · 실행 확인 후 보완한다 |
+| [why-how](why-how/SKILL.md) | `/why-how`, "왜·언제로 정리해줘", "설명용 md 만들어줘", "시험 대비로 개념 정리해줘" | 개념 목록(과제 목표 · 시험 범위)을 **Why — 왜 쓰나**와 **How — 언제 쓰나**로 나눈 학습 문서로. 개념마다 한 줄 정의 → Why → How 표 → 자주 나오는 함정 → 시험 한 줄 답, 끝에 한눈에 보기 표. 예시는 내 프로젝트 코드에서 찾아 이름 · 계산 결과를 대조해 붙인다 |
 
 ## 설치
 
@@ -25,7 +26,7 @@ AI(Claude Code)와 바이브 코딩을 하며 **자주 되풀이한 요청**을 
 
 ```bash
 git clone https://github.com/Frost0313z/vibe-coding-skills.git
-cp -r vibe-coding-skills/prd-task vibe-coding-skills/start vibe-coding-skills/ship vibe-coding-skills/refactor vibe-coding-skills/readme ~/.claude/skills/
+cp -r vibe-coding-skills/prd-task vibe-coding-skills/start vibe-coding-skills/ship vibe-coding-skills/refactor vibe-coding-skills/readme vibe-coding-skills/why-how ~/.claude/skills/
 ```
 
 ## 공통 원칙
